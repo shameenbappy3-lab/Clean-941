@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean 941 | Premium Cleaning Services – NothPort, FL</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Professional residential and commercial cleaning services in Port Charlotte, Fort Myers, Naples and surrounding areas. Licensed, insured, and trusted. Call 941-646-9087" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual GA4 ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KZDSTDJCE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,39 +27,32 @@
 </script>
   <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean 941 | Premium Cleaning Services – NothPort, FL</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="script.js" defer></script>
+
+<base target="_blank">
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════ -->
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
-        <span class="logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+        <div class="logo-icon"><i class="fas fa-sparkles"></i></div>
         <span class="logo-text">Clean <em>941</em></span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="tel:+14075550199" class="nav-cta">
-        <i class="fa-solid fa-phone"></i> Call Now
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+19416469087" class="nav-cta">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
@@ -60,70 +68,53 @@
     </ul>
   </div>
 
-  <!-- ══════════════════════════════════════
-       HERO SLIDER
-  ══════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="slider" id="slider">
-
+  <!-- Hero Slider -->
+  <section class="hero" id="home">
+    <div class="slider">
       <!-- Slide 1 -->
-      <div class="slide active" data-index="0">
+      <div class="slide active">
         <div class="slide-bg">
-          <img src="images/hero-slider-1.webp" alt="Residential Cleaning" class="slide-img" />
-          <div class="slide-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&auto=format&fit=crop" alt="Professional cleaning service" class="slide-img" />
         </div>
+        <div class="slide-overlay"></div>
         <div class="slide-content">
-          <span class="slide-eyebrow reveal-text">Orlando's Premier Service</span>
-          <h1 class="slide-title reveal-text">
-            Your Home, <em>Spotlessly</em><br/>Transformed
-          </h1>
-          <p class="slide-desc reveal-text">
-            Luxury residential cleaning delivered with precision,<br/>care, and a gold standard of excellence.
-          </p>
-          <div class="slide-actions reveal-text">
-            <a href="#contact" class="btn-primary">Get a Free Quote</a>
+          <span class="slide-eyebrow">Serving SW Florida</span>
+          <h1 class="slide-title">Your Home, <em>Spotlessly</em> Clean</h1>
+          <p class="slide-desc">Professional residential cleaning delivered with precision, care, and eco-friendly products. Serving Port Charlotte, Fort Myers, Naples & beyond.</p>
+          <div class="slide-actions">
+            <a href="#contact" class="btn-primary">Get a Free Quote <i class="fas fa-arrow-right"></i></a>
             <a href="#services" class="btn-ghost">Explore Services</a>
           </div>
         </div>
       </div>
-
       <!-- Slide 2 -->
-      <div class="slide" data-index="1">
+      <div class="slide">
         <div class="slide-bg">
-          <img src="images/hero-slider2.webp" alt="Commercial Cleaning" class="slide-img" />
-          <div class="slide-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&auto=format&fit=crop" alt="Office cleaning service" class="slide-img" />
         </div>
+        <div class="slide-overlay"></div>
         <div class="slide-content">
-          <span class="slide-eyebrow reveal-text">Commercial Excellence</span>
-          <h1 class="slide-title reveal-text">
-            Workspaces That<br/><em>Inspire</em> Productivity
-          </h1>
-          <p class="slide-desc reveal-text">
-            Spotless offices. Motivated teams. We clean<br/>so your business can shine.
-          </p>
-          <div class="slide-actions reveal-text">
-            <a href="#contact" class="btn-primary">Book Corporate Clean</a>
+          <span class="slide-eyebrow">Commercial Excellence</span>
+          <h1 class="slide-title">Workspaces That <em>Shine</em></h1>
+          <p class="slide-desc">Spotless offices. Motivated teams. We clean so your business can thrive across Charlotte, Lee & Collier counties.</p>
+          <div class="slide-actions">
+            <a href="#contact" class="btn-primary">Book Corporate Clean <i class="fas fa-arrow-right"></i></a>
             <a href="#services" class="btn-ghost">Our Services</a>
           </div>
         </div>
       </div>
-
       <!-- Slide 3 -->
-      <div class="slide" data-index="2">
+      <div class="slide">
         <div class="slide-bg">
-          <img src="images/hero-slider-3.jpeg" alt="Deep Cleaning" class="slide-img" />
-          <div class="slide-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&auto=format&fit=crop" alt="Deep cleaning service"  class="slide-img"/>
         </div>
+        <div class="slide-overlay"></div>
         <div class="slide-content">
-          <span class="slide-eyebrow reveal-text">Deep Clean Specialists</span>
-          <h1 class="slide-title reveal-text">
-            Every Corner.<br/><em>Immaculate.</em>
-          </h1>
-          <p class="slide-desc reveal-text">
-            Our deep-clean protocol leaves nothing behind —<br/>only the fresh feeling of perfection.
-          </p>
-          <div class="slide-actions reveal-text">
-            <a href="#contact" class="btn-primary">Schedule Deep Clean</a>
+          <span class="slide-eyebrow">Deep Clean Specialists</span>
+          <h1 class="slide-title">Every Corner. <em>Immaculate.</em></h1>
+          <p class="slide-desc">Our deep-clean protocol leaves nothing behind — only the fresh feeling of perfection. Trusted throughout Southwest Florida.</p>
+          <div class="slide-actions">
+            <a href="#contact" class="btn-primary">Schedule Deep Clean <i class="fas fa-arrow-right"></i></a>
             <a href="#about" class="btn-ghost">Our Story</a>
           </div>
         </div>
@@ -136,583 +127,534 @@
       <div class="scroll-line"></div>
     </div>
 
-    <!-- Gold Ticker Bar -->
+    <!-- Green Ticker Bar -->
     <div class="ticker-bar">
       <div class="ticker-track">
-        <span>✦ Residential Cleaning</span>
-        <span>✦ Commercial Cleaning</span>
-        <span>✦ Deep Clean</span>
-        <span>✦ Move-In/Out Cleaning</span>
-        <span>✦ Post-Construction</span>
-        <span>✦ Airbnb Turnover</span>
-        <span>✦ Residential Cleaning</span>
-        <span>✦ Commercial Cleaning</span>
-        <span>✦ Deep Clean</span>
-        <span>✦ Move-In/Out Cleaning</span>
-        <span>✦ Post-Construction</span>
-        <span>✦ Airbnb Turnover</span>
+        <span>✦ Port Charlotte</span>
+        <span>✦ Fort Myers</span>
+        <span>✦ Naples</span>
+        <span>✦ North Port</span>
+        <span>✦ Punta Gorda</span>
+        <span>✦ Venice</span>
+        <span>✦ Cape Coral</span>
+        <span>✦ Estero</span>
+        <span>✦ Bonita Springs</span>
+        <span>✦ Port Charlotte</span>
+        <span>✦ Fort Myers</span>
+        <span>✦ Naples</span>
+        <span>✦ North Port</span>
+        <span>✦ Punta Gorda</span>
+        <span>✦ Venice</span>
+        <span>✦ Cape Coral</span>
+        <span>✦ Estero</span>
+        <span>✦ Bonita Springs</span>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       TRUST BAR
-  ══════════════════════════════════════ -->
-  <section class="trust-bar scroll-reveal">
+  <!-- Trust Bar -->
+  <section class="trust-bar">
     <div class="container">
       <div class="trust-grid">
         <div class="trust-item">
-          <i class="fa-solid fa-shield-halved"></i>
+          <i class="fas fa-shield-alt"></i>
           <div>
             <strong>Fully Insured</strong>
-            <span>100% Bonded & Licensed</span>
+            <span>Licensed & Bonded</span>
           </div>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <i class="fa-solid fa-leaf"></i>
+          <i class="fas fa-leaf"></i>
           <div>
             <strong>Eco-Friendly</strong>
-            <span>Green-Certified Products</span>
+            <span>Green-Clean Products</span>
           </div>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <i class="fa-solid fa-star"></i>
+          <i class="fas fa-star"></i>
           <div>
             <strong>5-Star Rated</strong>
-            <span>500+ Google Reviews</span>
+            <span>Local Reviews</span>
           </div>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <i class="fa-solid fa-clock"></i>
+          <i class="fas fa-clock"></i>
           <div>
             <strong>Same-Day Service</strong>
-            <span>Available 7 Days a Week</span>
+            <span>Available 7 Days</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       SERVICES SECTION
-  ══════════════════════════════════════ -->
+  <!-- Services -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Our <em>Signature</em> Services</h2>
-        <p class="section-sub">Tailored cleaning solutions for every space, every need.</p>
+        <h2 class="section-title">Our Professional <em>Services</em></h2>
+        <p class="section-sub">Tailored cleaning solutions for homes and businesses across Southwest Florida.</p>
       </div>
-
       <div class="services-grid">
-
-        <div class="service-card scroll-reveal" style="--delay: 0s">
+        <!-- Service 1 -->
+        <div class="service-card scroll-reveal">
           <div class="service-img-wrap">
-            <img src="images/service-1.webp" alt="Residential" />
-            <div class="service-badge">Most Popular</div>
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop" alt="Residential cleaning" />
+            <span class="service-badge">Most Popular</span>
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <div class="service-icon"><i class="fas fa-home"></i></div>
             <h3>Residential Cleaning</h3>
             <p>Your home deserves expert care. We clean every room with detail-oriented precision using premium, eco-safe products.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
-        <div class="service-card scroll-reveal" style="--delay: 0.1s">
+        <!-- Service 2 -->
+        <div class="service-card scroll-reveal" data-delay="100">
           <div class="service-img-wrap">
-            <img src="images/service-2.jpg" alt="Commercial" />
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Commercial cleaning" />
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="service-icon"><i class="fas fa-building"></i></div>
             <h3>Commercial Cleaning</h3>
             <p>Professional-grade office and commercial space cleaning on schedules that work around your business hours.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
-        <div class="service-card scroll-reveal" style="--delay: 0.2s">
+        <!-- Service 3 -->
+        <div class="service-card scroll-reveal" data-delay="200">
           <div class="service-img-wrap">
-            <img src="images/service-3.jpg" alt="Deep Clean" />
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Deep cleaning" />
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+            <div class="service-icon"><i class="fas fa-sparkles"></i></div>
             <h3>Deep Cleaning</h3>
             <p>Thorough top-to-bottom sanitation. Perfect for seasonal resets, post-party cleanups, or move-in/out situations.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
-        <div class="service-card scroll-reveal" style="--delay: 0.3s">
+        <!-- Service 4 -->
+        <div class="service-card scroll-reveal" data-delay="300">
           <div class="service-img-wrap">
-            <img src="images/services-4.webp" alt="Airbnb" />
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop" alt="Airbnb turnover" />
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-brands fa-airbnb"></i></div>
+            <div class="service-icon"><i class="fas fa-key"></i></div>
             <h3>Airbnb Turnover</h3>
             <p>Fast, reliable, hotel-quality turnovers between guests. Maximize your reviews and protect your rating.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
-        <div class="service-card scroll-reveal" style="--delay: 0.4s">
+        <!-- Service 5 -->
+        <div class="service-card scroll-reveal" data-delay="400">
           <div class="service-img-wrap">
-            <img src="images/service-5.webp" alt="Post-Construction" />
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" alt="Post-construction cleaning" />
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+            <div class="service-icon"><i class="fas fa-hammer"></i></div>
             <h3>Post-Construction</h3>
             <p>Removing construction dust, debris, and grime so your newly built or renovated space is move-in ready.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
-        <div class="service-card scroll-reveal" style="--delay: 0.5s">
+        <!-- Service 6 -->
+        <div class="service-card scroll-reveal" data-delay="500">
           <div class="service-img-wrap">
-            <img src="images/service-6.webp" alt="Move In/Out" />
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Move-in move-out cleaning" />
           </div>
           <div class="service-body">
-            <div class="service-icon"><i class="fa-solid fa-truck-moving"></i></div>
+            <div class="service-icon"><i class="fas fa-box-open"></i></div>
             <h3>Move-In / Move-Out</h3>
             <p>Start or end your lease on a spotless note. We'll ensure your property passes any inspection standard.</p>
-            <a href="#contact" class="service-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       ABOUT SECTION
-  ══════════════════════════════════════ -->
+  <!-- About -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
-
-        <!-- Image Left -->
         <div class="about-image-col scroll-reveal-left">
           <div class="about-img-frame">
-            <img src="images/team3.jpeg" alt="Our Team" class="about-main-img" />
-            <!-- <div class="about-img-accent">
-              <img src="images/team2.webp" alt="Award" />
-            </div> -->
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&auto=format&fit=crop" alt="Cleaning team" class="about-main-img" />
+            <div class="about-img-accent">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80" alt="Cleaning supplies" />
+            </div>
             <div class="about-badge-float">
-              <i class="fa-solid fa-award"></i>
+              <i class="fas fa-certificate"></i>
               <div>
-                <strong>10+ Years</strong>
-                <span>of Excellence</span>
+                <strong>Trusted</strong>
+                <span>Local Business</span>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Text Right -->
         <div class="about-text-col scroll-reveal-right">
           <span class="section-tag">Our Story</span>
-          <h2 class="section-title">Cleaning Elevated to an <em>Art Form</em></h2>
-          <p class="about-lead">
-            Founded in Orlando in 2014, Lumière Clean was born from a simple belief: your environment shapes your life. A cleaner space means a clearer mind, more joy, and better living.
-          </p>
-          <p class="about-body">
-            What started as a two-person residential team has grown into Orlando's most trusted cleaning service, with over 50 trained specialists, cutting-edge equipment, and a commitment to eco-friendly practices that protect your family and the planet.
-          </p>
-          <p class="about-body">
-            Every member of our team is background-checked, fully insured, and trained to our gold-standard protocol. We don't just clean — we restore, refresh, and renew.
-          </p>
+          <h2 class="section-title">Cleaning You Can <em>Trust</em></h2>
+          <p class="about-lead">Clean 941 LLC is a locally owned and operated cleaning company serving Southwest Florida with pride.</p>
+          <p class="about-body">From Port Charlotte to Naples, we've built our reputation on reliability, thoroughness, and genuine care for our clients' spaces. We understand that inviting someone into your home or business requires trust — that's why every member of our team is background-checked, fully insured, and trained to deliver consistent, high-quality results.</p>
+          <p class="about-body">We use eco-friendly, family-safe cleaning products that protect your loved ones, pets, and the environment. Whether you need a one-time deep clean or regular maintenance, we treat every space as if it were our own.</p>
           <div class="about-stats">
             <div class="about-stat">
-              <span class="stat-num" data-target="2400">0</span><span>+</span>
+              <div class="stat-num" data-target="500">0</div>
+              <span>+</span>
               <label>Happy Clients</label>
             </div>
             <div class="about-stat">
-              <span class="stat-num" data-target="50">0</span><span>+</span>
-              <label>Specialists</label>
+              <div class="stat-num" data-target="10">0</div>
+              <span>+</span>
+              <label>Areas Served</label>
             </div>
             <div class="about-stat">
-              <span class="stat-num" data-target="10">0</span><span>+</span>
-              <label>Years in Orlando</label>
+              <div class="stat-num" data-target="100">0</div>
+              <span>%</span>
+              <label>Satisfaction</label>
             </div>
           </div>
-          <a href="#contact" class="btn-primary">Meet the Team</a>
+          <a href="#contact" class="btn-primary">Get Your Free Quote <i class="fas fa-arrow-right"></i></a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       WHY CHOOSE US
-  ══════════════════════════════════════ -->
+  <!-- Why Us -->
   <section class="why-us" id="why-us">
     <div class="why-us-bg">
-      <img src="https://placehold.co/1920x900/0A1628/1E3A5F?text=Premium+Cleaning+Background" alt="bg" />
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" alt="Background" />
       <div class="why-us-overlay"></div>
     </div>
     <div class="container">
-      <div class="section-header scroll-reveal" style="color: var(--cream)">
-        <span class="section-tag" style="color: var(--gold)">Our Promise</span>
-        <h2 class="section-title" style="color: var(--cream)">Why Orlando <em>Trusts</em> Us</h2>
+      <div class="section-header">
+        <span class="section-tag">Our Promise</span>
+        <h2 class="section-title" style="color: #FFFFFF;">Why SW Florida <em>Trusts Us</em></h2>
       </div>
       <div class="why-grid">
-        <div class="why-card scroll-reveal" style="--delay: 0s">
-          <div class="why-icon"><i class="fa-solid fa-flask"></i></div>
-          <h4>Hospital-Grade Products</h4>
-          <p>EPA-registered disinfectants paired with plant-based, child-safe cleaners for a powerful yet gentle clean.</p>
+        <div class="why-card scroll-reveal">
+          <div class="why-icon"><i class="fas fa-flask"></i></div>
+          <h4>Eco-Friendly Products</h4>
+          <p>Family-safe, pet-friendly cleaning solutions that are tough on grime but gentle on your home and the environment.</p>
         </div>
-        <div class="why-card scroll-reveal" style="--delay: 0.1s">
-          <div class="why-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="why-card scroll-reveal" data-delay="100">
+          <div class="why-icon"><i class="fas fa-calendar-check"></i></div>
           <h4>Flexible Scheduling</h4>
-          <p>Morning, evening, weekend — we work around your life, not the other way around.</p>
+          <p>Morning, evening, weekend — we work around your life, not the other way around. Same-day service available.</p>
         </div>
-        <div class="why-card scroll-reveal" style="--delay: 0.2s">
-          <div class="why-icon"><i class="fa-solid fa-rotate"></i></div>
+        <div class="why-card scroll-reveal" data-delay="200">
+          <div class="why-icon"><i class="fas fa-heart"></i></div>
           <h4>Satisfaction Guarantee</h4>
-          <p>Not satisfied? We'll re-clean within 24 hours — completely free. Your happiness is non-negotiable.</p>
+          <p>Not satisfied? We'll re-clean within 24 hours — completely free. Your happiness is our priority.</p>
         </div>
-        <div class="why-card scroll-reveal" style="--delay: 0.3s">
-          <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
-          <h4>Secure & Trusted</h4>
-          <p>Every cleaner passes rigorous background checks. Your home is in safe, professional hands.</p>
+        <div class="why-card scroll-reveal" data-delay="300">
+          <div class="why-icon"><i class="fas fa-user-shield"></i></div>
+          <h4>Trusted Team</h4>
+          <p>Every cleaner passes rigorous background checks. Your home and business are in safe, professional hands.</p>
         </div>
-        <div class="why-card scroll-reveal" style="--delay: 0.4s">
-          <div class="why-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-          <h4>Easy Online Booking</h4>
-          <p>Book in under 60 seconds. Instant confirmation. Manage everything from your phone.</p>
+        <div class="why-card scroll-reveal" data-delay="400">
+          <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h4>Local & Reliable</h4>
+          <p>Based in Port Charlotte, serving 10+ communities across Charlotte, Lee & Collier counties.</p>
         </div>
-        <div class="why-card scroll-reveal" style="--delay: 0.5s">
-          <div class="why-icon"><i class="fa-solid fa-earth-americas"></i></div>
-          <h4>Green Certified</h4>
-          <p>Our eco-protocols minimize environmental impact. Clean home, clean conscience, clean earth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════
-       BEFORE / AFTER
-  ══════════════════════════════════════ -->
-  <section class="before-after-section">
-    <div class="container">
-      <div class="section-header scroll-reveal">
-        <span class="section-tag">See the Difference</span>
-        <h2 class="section-title">The Lumière <em>Transformation</em></h2>
-      </div>
-      <div class="ba-grid">
-        <div class="ba-card scroll-reveal" style="--delay: 0s">
-          <div class="ba-images">
-            <div class="ba-img before-img">
-              <img src="https://placehold.co/500x360/6B7280/F9FAFB?text=Before+Cleaning" alt="Before" />
-              <span class="ba-label">Before</span>
-            </div>
-            <div class="ba-img after-img">
-              <img src="https://placehold.co/500x360/0A1628/C9A84C?text=After+Cleaning" alt="After" />
-              <span class="ba-label after">After</span>
-            </div>
-          </div>
-          <p>Kitchen Deep Clean</p>
-        </div>
-        <div class="ba-card scroll-reveal" style="--delay: 0.15s">
-          <div class="ba-images">
-            <div class="ba-img before-img">
-              <img src="https://placehold.co/500x360/6B7280/F9FAFB?text=Before+Cleaning" alt="Before" />
-              <span class="ba-label">Before</span>
-            </div>
-            <div class="ba-img after-img">
-              <img src="https://placehold.co/500x360/1E3A5F/F5F0E8?text=After+Cleaning" alt="After" />
-              <span class="ba-label after">After</span>
-            </div>
-          </div>
-          <p>Bathroom Restoration</p>
-        </div>
-        <div class="ba-card scroll-reveal" style="--delay: 0.3s">
-          <div class="ba-images">
-            <div class="ba-img before-img">
-              <img src="https://placehold.co/500x360/6B7280/F9FAFB?text=Before+Cleaning" alt="Before" />
-              <span class="ba-label">Before</span>
-            </div>
-            <div class="ba-img after-img">
-              <img src="https://placehold.co/500x360/0F2240/C9A84C?text=After+Cleaning" alt="After" />
-              <span class="ba-label after">After</span>
-            </div>
-          </div>
-          <p>Office Makeover</p>
+        <div class="why-card scroll-reveal" data-delay="500">
+          <div class="why-icon"><i class="fas fa-phone-alt"></i></div>
+          <h4>Easy to Reach</h4>
+          <p>Call or text 941-646-9087 anytime. Real people, real responses, real service.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       TESTIMONIALS
-  ══════════════════════════════════════ -->
+<!-- Before / After -->
+<section class="before-after-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">See the Difference</span>
+      <h2 class="section-title">The Clean 941 <em>Transformation</em></h2>
+    </div>
+    <div class="ba-grid">
+      <!-- Card 1: Kitchen -->
+      <div class="ba-card scroll-reveal">
+        <div class="ba-images">
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/94A3B8/F1F5F9/png?text=Before" alt="Kitchen before cleaning" />
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/0066CC/FFFFFF/png?text=After" alt="Kitchen after cleaning" />
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p>Kitchen Deep Clean</p>
+      </div>
+
+      <!-- Card 2: Bathroom -->
+      <div class="ba-card scroll-reveal" data-delay="100">
+        <div class="ba-images">
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/94A3B8/F1F5F9/png?text=Before" alt="Bathroom before cleaning" />
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/228B22/FFFFFF/png?text=After" alt="Bathroom after cleaning" />
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p>Bathroom Restoration</p>
+      </div>
+
+      <!-- Card 3: Office -->
+      <div class="ba-card scroll-reveal" data-delay="200">
+        <div class="ba-images">
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/94A3B8/F1F5F9/png?text=Before" alt="Office before cleaning" />
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-img">
+            <img src="https://placehold.co/500x360/004C99/FFFFFF/png?text=After" alt="Office after cleaning" />
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p>Office Makeover</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Testimonials -->
   <section class="testimonials" id="testimonials">
     <div class="container">
-      <div class="section-header scroll-reveal">
+      <div class="section-header">
         <span class="section-tag">Client Love</span>
-        <h2 class="section-title">What Orlando <em>Says</em></h2>
+        <h2 class="section-title">What SW Florida <em>Says</em></h2>
       </div>
-      <div class="testi-slider" id="testiSlider">
+      <div class="testi-slider">
         <div class="testi-track" id="testiTrack">
-
           <div class="testi-card">
             <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"Lumière Clean is absolutely incredible. They transformed my condo before I listed it on Airbnb and I've had perfect 5-star reviews ever since. Worth every penny."</p>
+            <p class="testi-text">Clean 941 is absolutely incredible. They transformed my condo before I listed it on Airbnb and I've had perfect 5-star reviews ever since. Worth every penny!</p>
             <div class="testi-author">
-              <img src="images/client2.jpg" alt="Sarah M." />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&auto=format&fit=crop&q=80" alt="Sarah M." />
               <div>
                 <strong>Sarah M.</strong>
-                <span>Airbnb Host, Lake Nona</span>
+                <span>Airbnb Host, Fort Myers</span>
               </div>
             </div>
           </div>
-
           <div class="testi-card">
             <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"I've tried four cleaning services in Orlando and nothing comes close. The team is professional, punctual, thorough, and genuinely cares. My office has never looked better."</p>
+            <p class="testi-text">I've tried three cleaning services in Port Charlotte and nothing comes close. The team is professional, punctual, thorough, and genuinely cares about doing a great job.</p>
             <div class="testi-author">
-              <img src="images/client1.jpg" alt="David J." />
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=80" alt="David J." />
               <div>
                 <strong>David J.</strong>
-                <span>Business Owner, Downtown Orlando</span>
+                <span>Business Owner, Port Charlotte</span>
               </div>
             </div>
           </div>
-
           <div class="testi-card">
             <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"After our renovation, the house was covered in construction dust. Lumière did a post-construction clean and it looked brand new. Highly recommend their deep clean package!"</p>
+            <p class="testi-text">After our renovation in Naples, the house was covered in construction dust. Clean 941 did a post-construction clean and it looked brand new. Highly recommend!</p>
             <div class="testi-author">
-              <img src="images/client4.png" alt="Linda R." />
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&auto=format&fit=crop&q=80" alt="Linda R." />
               <div>
                 <strong>Linda R.</strong>
-                <span>Homeowner, Winter Park</span>
+                <span>Homeowner, Naples</span>
               </div>
             </div>
           </div>
-
           <div class="testi-card">
             <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The team arrived on time, were incredibly polite, and left our home spotless. The eco-friendly products they use are a huge plus — we have two young kids and a dog."</p>
+            <p class="testi-text">The team arrived on time, were incredibly polite, and left our home spotless. The eco-friendly products they use are a huge plus — we have two young kids and a dog.</p>
             <div class="testi-author">
-              <img src="images/client3.jpg" alt="Marcus K." />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80" alt="Marcus K." />
               <div>
                 <strong>Marcus K.</strong>
-                <span>Family Home, Dr. Phillips</span>
+                <span>Family Home, North Port</span>
               </div>
             </div>
           </div>
-
         </div>
         <div class="testi-nav">
-          <button class="testi-btn" id="testiPrev"><i class="fa-solid fa-arrow-left"></i></button>
-          <button class="testi-btn" id="testiNext"><i class="fa-solid fa-arrow-right"></i></button>
+          <button class="testi-btn" id="testiPrev"><i class="fas fa-chevron-left"></i></button>
+          <button class="testi-btn" id="testiNext"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       EMAIL SIGNUP (MAILCHIMP)
-  ══════════════════════════════════════ -->
-  <section class="newsletter" id="contact">
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-deco"></div>
     <div class="newsletter-inner">
-      <div class="newsletter-deco"></div>
-      <div class="newsletter-content scroll-reveal">
-        <span class="section-tag" style="color: var(--gold)">Stay Connected</span>
-        <h2 class="section-title" style="color: var(--cream)">
-          Get Exclusive Offers &amp; <em>Cleaning Tips</em>
-        </h2>
-        <p style="color: rgba(245,240,232,0.75); margin-bottom: 2rem;">
-          Join 1,200+ Orlando homeowners getting seasonal deals, pro tips, and priority booking.
-        </p>
-
-        <!-- Mailchimp Signup Form -->
-        <!-- INSTRUCTIONS: Replace the action URL with your Mailchimp list's embed form URL.
-             Find it at: Mailchimp → Audience → Signup Forms → Embedded Forms → Copy URL -->
-        <form
-          action="https://YOUR-DOMAIN.us1.list-manage.com/subscribe/post?u=XXXXXXXXXX&amp;id=XXXXXXXXXX"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="newsletter-form"
-          target="_blank"
-          novalidate
-        >
-          <div class="form-row">
-            <input
-              type="text"
-              name="FNAME"
-              id="mce-FNAME"
-              placeholder="First Name"
-              class="form-input"
-              required
-            />
-            <input
-              type="email"
-              name="EMAIL"
-              id="mce-EMAIL"
-              placeholder="Your Email Address"
-              class="form-input"
-              required
-            />
-            <!-- Mailchimp bot-protection field – do NOT remove -->
-            <div style="position:absolute; left:-5000px;" aria-hidden="true">
-              <input type="text" name="b_XXXXXXXXXX_XXXXXXXXXX" tabindex="-1" value="" />
-            </div>
-            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-gold">
-              <i class="fa-solid fa-paper-plane"></i> Subscribe
-            </button>
-          </div>
-          <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
-          <div id="form-msg" class="form-msg"></div>
-        </form>
+      <div class="newsletter-content">
+        <span class="section-tag">Stay Connected</span>
+        <h2 class="section-title">Get Exclusive Offers & Cleaning Tips</h2>
+        <p class="section-sub" style="margin: 0 auto 1.5rem;">Join homeowners across SW Florida getting seasonal deals, pro tips, and priority booking.</p>
       </div>
+      <!-- Formspree Newsletter Form (Replace YOUR_FORM_ID) -->
+      <form class="newsletter-form" action="https://formspree.io/f/xjgpoqoz" method="POST">
+        <div class="form-row">
+          <input type="email" name="email" class="form-input" placeholder="Enter your email address" required />
+          <button type="submit" class="btn-green">Subscribe</button>
+        </div>
+        <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+        <div class="form-msg" id="form-msg"></div>
+      </form>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       BOOKING / CONTACT SECTION
-  ══════════════════════════════════════ -->
-  <section class="booking-section">
+  <!-- Booking / Contact -->
+  <section class="booking-section" id="contact">
     <div class="container">
       <div class="booking-grid">
-        <div class="booking-form-col scroll-reveal-left">
+        <div class="booking-form-col">
           <span class="section-tag">Free Estimate</span>
-          <h2 class="section-title">Book Your <em>Clean</em> Today</h2>
-          <form class="booking-form" id="bookingForm">
+          <h2 class="section-title">Book Your Clean <em>Today</em></h2>
+          <!-- Formspree Contact Form (Replace YOUR_FORM_ID) -->
+          <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mvzvqjqb" method="POST">
             <div class="booking-row">
               <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Jane Smith" required />
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
               </div>
               <div class="input-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="(407) 555-0199" required />
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
               </div>
-            </div>
-            <div class="input-group">
-              <label>Email Address</label>
-              <input type="email" placeholder="jane@example.com" required />
             </div>
             <div class="booking-row">
               <div class="input-group">
-                <label>Service Type</label>
-                <select>
-                  <option>Residential Cleaning</option>
-                  <option>Commercial Cleaning</option>
-                  <option>Deep Cleaning</option>
-                  <option>Airbnb Turnover</option>
-                  <option>Post-Construction</option>
-                  <option>Move-In/Out</option>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-group">
+                <label for="service">Service Type *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Residential Cleaning">Residential Cleaning</option>
+                  <option value="Commercial Cleaning">Commercial Cleaning</option>
+                  <option value="Deep Cleaning">Deep Cleaning</option>
+                  <option value="Airbnb Turnover">Airbnb Turnover</option>
+                  <option value="Post-Construction">Post-Construction</option>
+                  <option value="Move-In/Out">Move-In/Out</option>
                 </select>
               </div>
+            </div>
+            <div class="booking-row">
               <div class="input-group">
-                <label>Preferred Date</label>
-                <input type="date" />
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="input-group">
+                <label for="location">Your Location *</label>
+                <select id="location" name="location" required>
+                  <option value="">Select your area</option>
+                  <option value="Port Charlotte">Port Charlotte</option>
+                  <option value="Fort Myers">Fort Myers</option>
+                  <option value="Naples">Naples</option>
+                  <option value="North Port">North Port</option>
+                  <option value="Punta Gorda">Punta Gorda</option>
+                  <option value="Venice">Venice</option>
+                  <option value="Cape Coral">Cape Coral</option>
+                  <option value="Estero">Estero</option>
+                  <option value="Bonita Springs">Bonita Springs</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
             </div>
             <div class="input-group">
-              <label>Message (Optional)</label>
-              <textarea rows="4" placeholder="Tell us about your space or any special requests..."></textarea>
+              <label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your space and any special requirements..."></textarea>
             </div>
-            <button type="submit" class="btn-primary btn-full">
-              <i class="fa-solid fa-calendar-check"></i> Request Free Quote
-            </button>
+            <button type="submit" class="btn-primary btn-full">Request Free Quote <i class="fas fa-arrow-right"></i></button>
           </form>
         </div>
-
-        <div class="map-col scroll-reveal-right">
-          <span class="section-tag">Find Us</span>
-          <h2 class="section-title">Serving <em>All of Orlando</em></h2>
-          <p>Based in the heart of Orlando, we serve Orange, Osceola, and Seminole counties. Call us or drop by!</p>
+        <div class="map-col">
+          <span class="section-tag">Service Areas</span>
+          <h2 class="section-title">Proudly Serving <em>SW Florida</em></h2>
+          <p>Based in Port Charlotte, we proudly serve homes and businesses across Charlotte, Lee, and Collier counties.</p>
           <div class="map-info">
             <div class="map-info-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>123 Lumière Blvd, Orlando, FL 32801</span>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Port Charlotte, FL 33948</span>
             </div>
             <div class="map-info-item">
-              <i class="fa-solid fa-phone"></i>
-              <span>(407) 555-0199</span>
+              <i class="fas fa-phone"></i>
+              <span><a href="tel:+19416469087" style="color: inherit;">(941) 646-9087</a></span>
             </div>
             <div class="map-info-item">
-              <i class="fa-solid fa-envelope"></i>
-              <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="49212c25252609253c24202a252c2827672a2624">[email&#160;protected]</a></span>
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:clean941.northport@gmail.com" style="color: inherit;">clean941.northport@gmail.com</a></span>
             </div>
             <div class="map-info-item">
-              <i class="fa-solid fa-clock"></i>
-              <span>Mon–Sat: 7AM – 8PM | Sun: 8AM – 5PM</span>
+              <i class="fas fa-clock"></i>
+              <span>Mon–Sat: 7AM – 7PM | Sun: 8AM – 5PM</span>
+            </div>
+            <div class="map-info-item">
+              <i class="fas fa-route"></i>
+              <span>Serving: Port Charlotte, Fort Myers, Naples, North Port, Punta Gorda, Venice, Cape Coral, Estero, Bonita Springs + more</span>
             </div>
           </div>
-          <!-- Google Map – Orlando -->
           <div class="map-embed">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224476.1952735768!2d-81.56860673159064!3d28.48116826378696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
-              width="100%"
-              height="340"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Lumière Clean – Orlando, FL"
-            ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114136.123456789!2d-82.2359!3d26.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db6f0b0b0b0b0b%3A0x8b8b8b8b8b8b8b8b!2sPort%20Charlotte%2C%20FL!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-top">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="#" class="nav-logo footer-logo">
-              <span class="logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+              <div class="logo-icon"><i class="fas fa-sparkles"></i></div>
               <span class="logo-text">Clean <em>941</em></span>
             </a>
-            <p>Orlando's gold-standard cleaning service. Transforming spaces since 2014 with precision, care, and eco-conscious excellence.</p>
+            <p>Professional cleaning services for homes and businesses across Southwest Florida. Licensed, insured, and committed to excellence.</p>
             <div class="footer-social">
-              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="Google"><i class="fa-brands fa-google"></i></a>
-              <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+              <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
             </div>
           </div>
           <div class="footer-col">
             <h5>Services</h5>
             <ul>
-              <li><a href="#">Residential Cleaning</a></li>
-              <li><a href="#">Commercial Cleaning</a></li>
-              <li><a href="#">Deep Cleaning</a></li>
-              <li><a href="#">Move-In/Out</a></li>
-              <li><a href="#">Airbnb Turnover</a></li>
-              <li><a href="#">Post-Construction</a></li>
+              <li><a href="#services">Residential Cleaning</a></li>
+              <li><a href="#services">Commercial Cleaning</a></li>
+              <li><a href="#services">Deep Cleaning</a></li>
+              <li><a href="#services">Move-In/Out</a></li>
+              <li><a href="#services">Airbnb Turnover</a></li>
+              <li><a href="#services">Post-Construction</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h5>Company</h5>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Reviews</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#why-us">Why Us</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h5>Contact</h5>
             <ul class="footer-contact">
-              <li><i class="fa-solid fa-location-dot"></i> 123 Lumière Blvd, Orlando, FL</li>
-              <li><i class="fa-solid fa-phone"></i> (407) 555-0199</li>
-              <li><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ef6fbf2f2f1def2ebf3f7fdf2fbfff0b0fdf1f3">[email&#160;protected]</a></li>
-              <li><i class="fa-solid fa-clock"></i> Mon–Sat: 7AM–8PM</li>
+              <li><i class="fas fa-map-marker-alt"></i> Port Charlotte, FL</li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+19416469087" style="color: inherit;">(941) 646-9087</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:clean941.northport@gmail.com" style="color: inherit;">clean941.northport@gmail.com</a></li>
+              <li><i class="fas fa-clock"></i> Mon–Sat: 7AM–7PM</li>
             </ul>
           </div>
         </div>
@@ -720,18 +662,22 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Lumière Clean. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        <p>Proudly serving Orlando, Winter Park, Lake Nona, Dr. Phillips, Kissimmee &amp; surrounding areas.</p>
+        <p>&copy; <span id="year"></span> Clean 941 LLC. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p style="margin-top: 0.5rem;">Proudly serving Port Charlotte, Fort Myers, Naples, North Port, Punta Gorda, Venice, Cape Coral, Estero, Bonita Springs & surrounding areas.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════
-       FLOATING CALL BUTTON
-  ══════════════════════════════════════ -->
-  <a href="tel:+14075550199" class="float-call" id="floatCall" aria-label="Call us now">
+  <!-- Floating Call Button -->
+  <a href="tel:+19416469087" class="float-call" aria-label="Call us now">
     <div class="float-call-ring"></div>
-    <div class="float-call-inner">
-      <i class="fa-solid fa-phone"></i>
-    </div>
-    <span class="float-
+    <div class="float-call-inner"><i class="fas fa-phone"></i></div>
+    <span class="float-call-tooltip">Call Now</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>

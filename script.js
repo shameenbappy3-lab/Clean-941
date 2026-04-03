@@ -1,8 +1,7 @@
 /* ══════════════════════════════════════════════════════
-   LUMIÈRE CLEAN — script.js
-   Hero Slider | Scroll Animations | Counter | Forms
+CLEAN 941 LLC — script.js
+Hero Slider | Scroll Animations | Counter | Forms
 ══════════════════════════════════════════════════════ */
-
 "use strict";
 
 /* ── DOM READY ─────────────────────────────────────── */
@@ -14,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
   initCounters();
   initFloatingButton();
   initBookingForm();
-  initMailchimpForm();
+  initNewsletterForm();
   initMobileMenu();
   initBackToTop();
+  initFooterYear();
 });
 
 /* ══════════════════════════════════════════════════════
-   1. NAVBAR — scroll behaviour
+NAVBAR — scroll behaviour
 ══════════════════════════════════════════════════════ */
 function initNavbar() {
   const navbar = document.getElementById("navbar");
   if (!navbar) return;
-
   const onScroll = () => {
     if (window.scrollY > 60) {
       navbar.classList.add("scrolled");
@@ -33,100 +32,86 @@ function initNavbar() {
       navbar.classList.remove("scrolled");
     }
   };
-
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 }
 
 /* ══════════════════════════════════════════════════════
-   2. HERO SLIDER
+HERO SLIDER
 ══════════════════════════════════════════════════════ */
 function initHeroSlider() {
   const slides = document.querySelectorAll(".slide");
   if (!slides.length) return;
-
   let current = 0;
   const INTERVAL = 5500;
-
   function resetImage(slide) {
     const img = slide.querySelector(".slide-img");
     if (!img) return;
     img.style.transition = "none";
     img.style.transform = "scale(1.08)";
-    void img.offsetWidth; // force reflow
+    void img.offsetWidth;
     img.style.transition = "";
   }
-
   function next() {
     slides[current].classList.remove("active");
     current = (current + 1) % slides.length;
     resetImage(slides[current]);
     slides[current].classList.add("active");
   }
-
   setInterval(next, INTERVAL);
 }
 
 /* ══════════════════════════════════════════════════════
-   3. TESTIMONIALS SLIDER
+TESTIMONIALS SLIDER
 ══════════════════════════════════════════════════════ */
 function initTestimonialSlider() {
-  const track   = document.getElementById("testiTrack");
+  const track = document.getElementById("testiTrack");
   const prevBtn = document.getElementById("testiPrev");
   const nextBtn = document.getElementById("testiNext");
   if (!track) return;
-
-  const cards     = Array.from(track.querySelectorAll(".testi-card"));
+  const cards = Array.from(track.querySelectorAll(".testi-card"));
   const cardCount = cards.length;
-  let current     = 0;
-  const GAP       = 24; // 1.5rem in px
-
+  let current = 0;
+  const GAP = 24;
   const getVisible = () => {
-    if (window.innerWidth < 768)  return 1;
+    if (window.innerWidth < 768) return 1;
     if (window.innerWidth < 1024) return 2;
     return 3;
   };
-
-  // Force explicit card widths so JS and CSS agree
   function setCardWidths() {
-    const visible   = getVisible();
+    const visible = getVisible();
     const container = track.parentElement.offsetWidth;
-    const cardW     = (container - GAP * (visible - 1)) / visible;
+    const cardW = (container - GAP * (visible - 1)) / visible;
     cards.forEach(c => {
       c.style.minWidth = cardW + "px";
-      c.style.width    = cardW + "px";
+      c.style.width = cardW + "px";
     });
     return cardW;
   }
-
   function slideTo(index) {
-    const cardW  = setCardWidths();
+    const cardW = setCardWidths();
     const maxIdx = Math.max(0, cardCount - getVisible());
     current = Math.max(0, Math.min(index, maxIdx));
     track.style.transform = `translateX(-${current * (cardW + GAP)}px)`;
   }
-
   if (prevBtn) prevBtn.addEventListener("click", () => slideTo(current - 1));
   if (nextBtn) nextBtn.addEventListener("click", () => slideTo(current + 1));
-
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => slideTo(0), 150);
   }, { passive: true });
-
   slideTo(0);
 }
 
 /* ══════════════════════════════════════════════════════
-   4. SCROLL REVEAL — Intersection Observer
+SCROLL REVEAL — Intersection Observer
 ══════════════════════════════════════════════════════ */
 function initScrollReveal() {
   const elements = document.querySelectorAll(
     ".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right"
   );
   if (!elements.length) return;
-
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -138,35 +123,33 @@ function initScrollReveal() {
     },
     { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
   );
-
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((el) => {
+    const delay = el.dataset.delay || "0";
+    el.style.setProperty("--delay", `${delay}ms`);
+    observer.observe(el);
+  });
 }
 
 /* ══════════════════════════════════════════════════════
-   5. ANIMATED COUNTERS
+ANIMATED COUNTERS
 ══════════════════════════════════════════════════════ */
 function initCounters() {
   const counters = document.querySelectorAll(".stat-num");
   if (!counters.length) return;
-
   const ease = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
   const animateCounter = (el) => {
-    const target   = parseInt(el.dataset.target, 10);
-    const duration = 2000; // ms
-    const start    = performance.now();
-
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 2000;
+    const start = performance.now();
     const tick = (now) => {
-      const elapsed  = now - start;
+      const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      const value    = Math.round(ease(progress) * target);
+      const value = Math.round(ease(progress) * target);
       el.textContent = value.toLocaleString();
       if (progress < 1) requestAnimationFrame(tick);
     };
-
     requestAnimationFrame(tick);
   };
-
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -178,17 +161,15 @@ function initCounters() {
     },
     { threshold: 0.5 }
   );
-
   counters.forEach((el) => observer.observe(el));
 }
 
 /* ══════════════════════════════════════════════════════
-   6. FLOATING CALL BUTTON — show after scroll
+FLOATING CALL BUTTON — show after scroll
 ══════════════════════════════════════════════════════ */
 function initFloatingButton() {
   const btn = document.getElementById("floatCall");
   if (!btn) return;
-
   window.addEventListener(
     "scroll",
     () => {
@@ -202,20 +183,17 @@ function initFloatingButton() {
     },
     { passive: true }
   );
-
-  // Initially hidden
   btn.style.opacity = "0";
   btn.style.transition = "opacity 0.4s ease";
   btn.style.pointerEvents = "none";
 }
 
 /* ══════════════════════════════════════════════════════
-   7. BACK TO TOP BUTTON
+BACK TO TOP BUTTON
 ══════════════════════════════════════════════════════ */
 function initBackToTop() {
   const btn = document.getElementById("backToTop");
   if (!btn) return;
-
   window.addEventListener(
     "scroll",
     () => {
@@ -227,164 +205,129 @@ function initBackToTop() {
     },
     { passive: true }
   );
-
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
 /* ══════════════════════════════════════════════════════
-   8. BOOKING FORM — simple validation & submission
+BOOKING FORM — Formspree AJAX Submission
 ══════════════════════════════════════════════════════ */
 function initBookingForm() {
   const form = document.getElementById("bookingForm");
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const btn = form.querySelector("button[type='submit']");
     const original = btn.innerHTML;
-
     btn.disabled = true;
-    btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending...`;
+    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending...`;
 
-    // Simulate async submission (replace with your backend/Formspree/etc.)
-    setTimeout(() => {
-      btn.innerHTML = `<i class="fa-solid fa-check"></i> Quote Requested! We'll call you soon.`;
-      btn.style.background = "#22c55e";
-      btn.style.color = "#fff";
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
 
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.innerHTML = original;
-        btn.style.background = "";
-        btn.style.color = "";
+      if (response.ok) {
+        btn.innerHTML = `<i class="fas fa-check"></i> Quote Requested! We'll call you soon.`;
+        btn.style.background = "#228B22";
+        btn.style.color = "#fff";
         form.reset();
-      }, 4000);
-    }, 1500);
+
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.innerHTML = original;
+          btn.style.background = "";
+          btn.style.color = "";
+        }, 4000);
+      } else {
+        const data = await response.json();
+        throw new Error(data.errors ? data.errors.map(e => e.message).join(", ") : "Submission failed");
+      }
+    } catch (error) {
+      btn.innerHTML = original;
+      btn.disabled = false;
+      alert("Submission failed. Please call us directly at (941) 646-9087");
+      console.error("Formspree error:", error);
+    }
   });
 }
 
 /* ══════════════════════════════════════════════════════
-   9. MAILCHIMP FORM — AJAX submission
-   ─────────────────────────────────────────────────────
-   HOW TO CONFIGURE:
-   1. Go to Mailchimp → Audience → Signup Forms → Embedded Forms
-   2. Copy your form action URL (contains your list ID & u= param)
-   3. Paste it into the <form action="..."> in index.html
-   4. Replace the bot-honeypot field name b_XXXX_XXXX with yours
+NEWSLETTER FORM — Formspree AJAX Submission
 ══════════════════════════════════════════════════════ */
-function initMailchimpForm() {
-  const form = document.getElementById("mc-embedded-subscribe-form");
-  const msg  = document.getElementById("form-msg");
+function initNewsletterForm() {
+  const form = document.querySelector(".newsletter-form");
+  const msg = document.getElementById("form-msg");
   if (!form || !msg) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("mce-EMAIL").value.trim();
-    const fname = document.getElementById("mce-FNAME").value.trim();
-
+    const email = form.querySelector('input[type="email"]').value.trim();
     if (!email || !validateEmail(email)) {
       showMsg(msg, "error", "Please enter a valid email address.");
       return;
     }
 
-    const submitBtn = form.querySelector("#mc-embedded-subscribe");
-    const original  = submitBtn.innerHTML;
+    const submitBtn = form.querySelector("button[type='submit']");
+    const original = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Subscribing...`;
+    submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Subscribing...`;
     msg.className = "form-msg";
     msg.textContent = "";
 
-    // Build JSONP URL from form action (Mailchimp requires JSONP for cross-origin)
-    const actionUrl = form.action.replace("/post?", "/post-json?") + "&c=mcCallback";
-    const params    = new URLSearchParams({
-      EMAIL: email,
-      FNAME: fname,
-    });
-    const jsonpUrl = `${actionUrl}&${params.toString()}`;
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
 
-    // JSONP callback
-    window.mcCallback = (data) => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = original;
 
-      if (data.result === "success") {
+      if (response.ok) {
         showMsg(msg, "success", "🎉 You're subscribed! Check your inbox.");
         form.reset();
       } else {
-        // Mailchimp returns HTML in msg — strip tags
-        const cleaned = stripTags(data.msg || "Something went wrong. Please try again.");
-        showMsg(msg, "error", cleaned);
+        const data = await response.json();
+        showMsg(msg, "error", data.errors ? data.errors[0].message : "Something went wrong. Please try again.");
       }
-      // Clean up script tag
-      const old = document.getElementById("mc-jsonp");
-      if (old) old.remove();
-    };
-
-    // Inject script tag for JSONP
-    const script    = document.createElement("script");
-    script.id       = "mc-jsonp";
-    script.src      = jsonpUrl;
-    script.onerror  = () => {
+    } catch (error) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = original;
       showMsg(msg, "error", "Could not connect. Please try again later.");
-      script.remove();
-    };
-    document.head.appendChild(script);
-
-    // Timeout fallback (5s)
-    setTimeout(() => {
-      const s = document.getElementById("mc-jsonp");
-      if (s) {
-        s.remove();
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = original;
-        showMsg(
-          msg,
-          "error",
-          "Request timed out. Please refresh and try again, or call us directly."
-        );
-      }
-    }, 5000);
+      console.error("Formspree error:", error);
+    }
   });
 }
 
-/* ── HELPERS ───────────────────────────────────────── */
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function showMsg(el, type, text) {
-  el.className = `form-msg ${type}`;
-  el.textContent = text;
-}
-
-function stripTags(html) {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
-}
-
 /* ══════════════════════════════════════════════════════
-   10. MOBILE MENU
+MOBILE MENU
 ══════════════════════════════════════════════════════ */
 function initMobileMenu() {
-  const hamburger   = document.getElementById("hamburger");
-  const mobileMenu  = document.getElementById("mobileMenu");
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
   if (!hamburger || !mobileMenu) return;
-
   hamburger.addEventListener("click", () => {
     const isOpen = mobileMenu.classList.toggle("open");
     hamburger.classList.toggle("open", isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 }
-
 function closeMobileMenu() {
-  const hamburger  = document.getElementById("hamburger");
+  const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   if (!mobileMenu) return;
   mobileMenu.classList.remove("open");
@@ -393,15 +336,18 @@ function closeMobileMenu() {
 }
 
 /* ══════════════════════════════════════════════════════
-   11. SMOOTH ANCHOR SCROLL — offset for fixed navbar
+FOOTER YEAR
 ══════════════════════════════════════════════════════ */
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    const target = document.querySelector(anchor.getAttribute("href"));
-    if (!target) return;
-    e.preventDefault();
-    const navHeight = document.getElementById("navbar")?.offsetHeight || 80;
-    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
-    window.scrollTo({ top, behavior: "smooth" });
-  });
-});
+function initFooterYear() {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+/* ── HELPERS ───────────────────────────────────────── */
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+function showMsg(el, type, text) {
+  el.className = `form-msg ${type}`;
+  el.textContent = text;
+}
